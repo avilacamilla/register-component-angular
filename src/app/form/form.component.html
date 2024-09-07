@@ -1,0 +1,30 @@
+<form class="form-container">
+    <div *ngFor="let field of fields" class="form-input-container">
+        <label 
+            [for]="field.id" 
+            class="form-label"
+        >
+            {{ field.label }}
+        </label>
+        <input 
+            [type]="field.type" 
+            [id]="field.id"
+            class="form-input" 
+        />
+    </div>
+    <div class="form-btn-container">
+        <button class="form-btn-send">
+            Enviar dados para cadastro
+        </button>
+    </div>
+    <div class="form-message-container">
+        <p class="form-message-success">
+            Cadastro enviado com sucesso!
+        </p>
+        <p class="form-message-error">
+            Erro ao cadastrar. Tente novamente mais tarde!
+        </p>
+    </div>
+</form>
+  
+  
