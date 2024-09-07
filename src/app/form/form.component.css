@@ -81,6 +81,8 @@
     align-items: center;
     height: 2rem;
     background-color: rgb(110, 172, 18);
+    font-family: monospace;
+    font-size: 1.1rem;
     color: #fff;
 }
 
@@ -90,11 +92,35 @@
     align-items: center;
     height: 2rem;
     background-color: #b40d0d;
+    font-family: monospace;
+    font-size: 1.1rem;
     color: #fff;
 }
 
 .hidden-message {
     display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .form-container {
+        width: 100%;
+        background-color: #ab49c9;
+    }
+    
+    .form-btn-send {
+        width: 100%;
+        height: 2.5rem;
+        border: none;
+        border-radius: .2rem;
+        background-color: #5a818d8e;
+        font-family: monospace, sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        transition: all ease .6s;
+    }
 }
 
 
