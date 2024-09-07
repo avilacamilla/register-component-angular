@@ -75,7 +75,7 @@
 }
 
 
-.success {
+.form-message-success {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +84,7 @@
     color: #fff;
 }
 
-.error {
+.form-message-error {
     display: flex;
     justify-content: center;
     align-items: center;
