@@ -62,4 +62,40 @@
     
 }
 
+.form-message-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-message {
+    text-align: center;
+    font-family: monospace;
+    font-size: 1rem;
+    color: #fffefbfa;
+}
+
+
+.success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    background-color: rgb(110, 172, 18);
+    color: #fff;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    background-color: #b40d0d;
+    color: #fff;
+}
+
+.hidden-message {
+    display: none;
+}
+
+
 
