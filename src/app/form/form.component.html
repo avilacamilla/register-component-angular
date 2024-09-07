@@ -1,30 +1,36 @@
-<form class="form-container">
+<form class="form-container" (ngSubmit)="onSubmit()">
     <div *ngFor="let field of fields" class="form-input-container">
-        <label 
-            [for]="field.id" 
-            class="form-label"
-        >
-            {{ field.label }}
-        </label>
-        <input 
-            [type]="field.type" 
-            [id]="field.id"
-            class="form-input" 
-        />
+      <label 
+        [for]="field.id" 
+        class="form-label">
+        {{ field.label }}
+      </label>
+      <input 
+        [(ngModel)]="formData[field.id]" 
+        [type]="field.type" 
+        [id]="field.id" 
+        class="form-input" 
+        [name]="field.id" 
+        required
+      />
     </div>
     <div class="form-btn-container">
-        <button class="form-btn-send">
-            Enviar dados para cadastro
-        </button>
+      <button type="submit" class="form-btn-send">
+        Enviar dados para cadastro
+      </button>
     </div>
     <div class="form-message-container">
-        <p class="form-message-success">
-            Cadastro enviado com sucesso!
-        </p>
-        <p class="form-message-error">
-            Erro ao cadastrar. Tente novamente mais tarde!
-        </p>
+      <p 
+        class="form-message success hidden-message" 
+        [class.hidden-message]="!showSuccessMessage">
+        Cadastro enviado com sucesso!
+      </p>
+      <p 
+        class="form-message error hidden-message"
+        [class.hidden-message]="!showErrorMessage"
+        >
+        Preencha todos os campos!
+      </p>
     </div>
-</form>
-  
+  </form>
   
